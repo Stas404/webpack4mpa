@@ -1,0 +1,7 @@
+.idea
+.jsconfig.json
+node_modules
+npm-debug.log
+build
+tests/nightwatch/screenshots
+tests/nightwatch/reports

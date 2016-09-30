@@ -1,0 +1,29 @@
+.logo {
+	position: absolute;
+	width:320px;
+	left: $pad-hor;
+	top: $pad_vert;
+
+	a {
+		color: $color-text-bold;
+		font-weight:bold;
+		
+	}
+
+	img {
+		vertical-align: middle;
+		width: $pad-hor*4;
+	}
+
+	strong {
+		display: inline-block;
+		margin-left: $pad-hor*0.5;
+		vertical-align: middle;
+	}
+
+	em {
+		display: block;
+		color: $color-text-light;
+		font-size: $font-size*0.8
+	}
+}

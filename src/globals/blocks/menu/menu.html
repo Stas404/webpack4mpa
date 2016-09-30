@@ -1,0 +1,7 @@
+<ul <% if (data.className) { %>class="<%= data.className %>"<% } %>>
+	<% data.items.forEach(function(item) { %>
+		<li <% if (item.className) { %> class="<%= item.className %>" <% } %>>
+			<a href="<%= (data.linkPrefix + item.href + data.linkPostfix) %>"><%= item.text %></a>
+		</li>
+	<% }); %>
+</ul>

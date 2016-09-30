@@ -1,0 +1,52 @@
+@import './../../globals/scss/vars.scss';
+@import './../../globals/scss/reset.scss';
+@import './../../globals/scss/base.scss';
+
+// Layout
+
+	.root {min-height:100%;}
+
+	header {
+		padding: 0 $pad-hor;
+		border-bottom: 1px solid $color-gray;
+		height:90px;
+		background: url($assets + '/img/bg.jpg');
+	}
+
+	main {
+		padding: 0 $pad_hor;		
+		padding-bottom:100px;
+		background: $color-gray-light;
+
+		ul li {
+			list-style-type: square;
+			margin-left: 48px !important;
+			margin-bottom: 12px;
+		}
+	}
+
+	footer {
+		height: $footer-height - 4;
+		margin-top: -($footer-height + $pad_vert*2);
+		padding: $pad_vert $pad_hor;
+		background: url($assets + '/img/bg.jpg');
+		border-top: 4px solid $color-blue;
+
+		&:after {
+			content: '';
+			display:block;
+			clear: both;
+			width:100%;
+		}
+	}
+
+// Header modules
+	@import './header/logo/logo.scss';
+	@import './header/menu/menu.scss';
+
+// Main modules
+	//@import './main/sidebar/sidebar.scss';
+
+// Footer modules
+	@import './footer/copyrights/copyrights.scss';
+	@import './footer/menu/menu.scss';

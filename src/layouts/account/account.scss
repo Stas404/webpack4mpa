@@ -1,0 +1,50 @@
+@import './../../globals/scss/vars.scss';
+@import './../../globals/scss/reset.scss';
+@import './../../globals/scss/base.scss';
+
+// Layout
+
+	.root {min-height:100%;}
+
+	html {
+		background: #333;
+		color: #fff;
+	}
+
+	header {
+		padding: 0 $pad-hor;
+		border-bottom: 4px solid #000;
+		height:90px;
+		background: #444;
+		color: #c4c4c4;
+	}
+
+	main {
+		padding: 0 $pad_hor;		
+		padding-bottom:100px;
+
+		ul li {
+			list-style-type: square;
+			margin-left: 48px !important;
+			margin-bottom: 12px;
+		}
+	}
+
+	footer {
+		height: $footer-height;
+		margin-top: -($footer-height + $pad_vert*2);
+		padding: $pad_vert $pad_hor;
+		background: $color-gray;
+		background: url($assets + '/img/bg.jpg');
+		outline-top: 4px solid $color-blue;
+
+		&:after {
+			content: '';
+			display:block;
+			clear: both;
+			width:100%;
+		}
+	}
+
+// Main modules
+	@import './main/form/form.scss';

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= site.title %></title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="<%= site.description %>">
+  <meta name="keywords" content="<%= site.keywords %>">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+
+  <script type="text/javascript" src="assets/js/account.js"></script>
+
+<% if (__ENV__ == 'production') { %>
+  <link rel="stylesheet" type="text/css" href="assets/css/account.css">  
+<% } else { %>
+  <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+<% } %>
+</head>
+<body>
+  <div class="root">
+
+    <!-- HEADER -->
+    <header>
+      <h3>Account</h3>
+      <a href="/">Back to home</a>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <% include ./account/main/main.html %>
+    </main>
+
+  </div>
+</body>
+</html>

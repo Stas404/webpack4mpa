@@ -1,0 +1,27 @@
+header .menu {
+	position: absolute;
+	right: $pad-hor;
+	top: $pad-vert+14;
+
+	li {
+		display:inline-block;
+		margin-left: $pad-hor*0.5;
+		border: 1px solid $color-gray;
+		background: $color-gray-light;
+	}
+
+	li a {
+		display:inline-block;	
+		padding: $pad-vert $pad-hor;
+	}
+
+	li:hover {
+		background: $color-blue;
+
+		a {
+			color:#fff;
+		}
+	}
+
+}
+

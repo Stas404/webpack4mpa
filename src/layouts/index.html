@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= site.title %></title>
+	<base href="/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<meta name="description" content="<%= site.description %>">
+	<meta name="keywords" content="<%= site.keywords %>">
+
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+
+	<script type="text/javascript" src="assets/js/index.js"></script>
+
+<% if (__ENV__ == 'production') { %>
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<% } else { %>
+	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+<% } %>
+
+</head>
+<body>
+	<div class="root">
+		<header>
+
+			<!-- HEADER LOGO -->
+			<% include ./index/header/logo/logo.html %>
+
+			<!-- HEADER MENU -->
+			<nav class="menu">
+				<% data = site.menuTop; %>
+				<% include ./../globals/blocks/menu/menu.html %>
+			</nav>
+
+		</header>
+
+		<main>
+			<!-- MAIN -->
+			<% include ./index/main/main.html %>    
+		</main>
+	</div>
+
+	<footer>
+
+		<!-- FOOTER COPYRIGHTS -->
+		<% include ./index/footer/copyrights/copyrights.html %>
+
+		<!-- FOOTER MENU -->
+		<nav class="footer-menu">
+			<p>Footer menu</p>
+			<% data = site.menuBottom %>
+			<% include ./../globals/blocks/menu/menu.html %>
+		</nav>
+
+	</footer>
+
+</body>
+</html>
