@@ -1,5 +1,6 @@
 # TODO:
 
+[ ] className for each page
 [ ] snippets/blocks (menu, form, tabs, hcard, etc.)
 [ ] highlight active item (menu: .active class)
 [ ] localization
@@ -14,3 +15,4 @@
 [ ] optimize: webpack common chunks
 [ ] html minification for production
 [ ] autogenerating site-map / robots.txt
+
